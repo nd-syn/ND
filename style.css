@@ -189,4 +189,87 @@ footer {
     .service-item {
         width: 90%;
     }
+    .site-header {
+        padding: 1em 0 0.7em 0;
+    }
+    .brand-title {
+        font-size: 1.5em;
+        padding: 0.1em 0.5em;
+        letter-spacing: 3px;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+    nav ul li {
+        margin: 0.5em 0;
+    }
+    .hero {
+        padding: 2.5em 0.5em 2em 0.5em;
+    }
+    .hero h1 {
+        font-size: 1.5em;
+    }
+    .hero p {
+        font-size: 1em;
+    }
+    .services {
+        padding: 2em 0.5em 1em 0.5em;
+    }
+    .services h2, .whychoose h2, .contact h2 {
+        font-size: 1.3em;
+    }
+    .whychoose {
+        padding: 2em 0.5em 1em 0.5em;
+    }
+    .why-list li {
+        font-size: 1em;
+        padding: 0.7em 1em;
+    }
+    .contact {
+        padding: 2em 0.5em 3em 0.5em;
+    }
+    footer {
+        font-size: 0.9em;
+        padding: 0.7em 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .brand-title {
+        font-size: 1.1em;
+        padding: 0.1em 0.2em;
+        letter-spacing: 2px;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 0.3em;
+    }
+    .service-item {
+        padding: 1em 0.5em;
+        width: 98%;
+    }
+    .why-list li {
+        font-size: 0.95em;
+        padding: 0.5em 0.7em;
+    }
+    .hero h1 {
+        font-size: 1.1em;
+    }
+    .hero {
+        padding: 1.5em 0.2em 1em 0.2em;
+    }
+    .services, .whychoose, .contact {
+        padding-left: 0.2em;
+        padding-right: 0.2em;
+    }
+}
+
+/* Optional: Make nav sticky on mobile for easier access */
+@media (max-width: 900px) {
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
 }
