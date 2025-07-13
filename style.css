@@ -1,172 +1,20 @@
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #101820; /* deep navy */
-    color: #fff;
-}
-nav {
-    background: #1a1a2e; /* rich dark blue */
-    padding: 1em 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
-nav ul li {
-    margin: 0 1.5em;
-}
-nav ul li a {
-    color: #FFD700; /* gold */
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1em;
-    letter-spacing: 1px;
-    transition: color 0.2s;
-}
-nav ul li a:hover {
-    color: #fff;
-    text-shadow: 0 0 8px #FFD700;
-}
-main {
-    padding: 3em 2em 6em 2em;
-    text-align: center;
-}
-h1 {
-    color: #FFD700;
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
-    letter-spacing: 2px;
-}
-p {
-    color: #e0c36b;
-    font-size: 1.2em;
-}
-footer {
-    background: #1a1a2e;
-    color: #FFD700;
-    text-align: center;
-    padding: 1em 0;
-    letter-spacing: 1px;
-    font-size: 1em;
-    border-top: 1px solid #FFD700;
-}
-.hero {
-    background: linear-gradient(120deg, #101820 70%, #FFD700 100%);
-    padding: 4em 2em 3em 2em;
-    text-align: center;
-    border-bottom: 2px solid #FFD700;
-}
-.hero h1 {
-    color: #FFD700;
-    font-size: 2.8em;
-    margin-bottom: 0.3em;
-    letter-spacing: 2px;
-}
-.hero p {
-    color: #fff;
-    font-size: 1.3em;
-    margin-bottom: 0;
-}
-.services {
-    background: #181c2b;
-    padding: 3em 1em 2em 1em;
-    text-align: center;
-}
-.services h2 {
-    color: #FFD700;
-    font-size: 2em;
-    margin-bottom: 1.5em;
-    letter-spacing: 1px;
-}
-.services-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2em;
-}
-.service-item {
-    background: #23263a;
-    border-radius: 14px;
-    box-shadow: 0 2px 12px rgba(16,24,32,0.08);
-    padding: 2em 1.5em;
-    width: 260px;
-    margin-bottom: 1.5em;
-    transition: transform 0.2s, box-shadow 0.2s;
-    border: 1px solid #FFD70022;
-}
-.service-item:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 6px 24px #FFD70033;
-}
-.service-icon {
-    font-size: 2.2em;
-    margin-bottom: 0.5em;
-    display: block;
-}
-.service-item h3 {
-    color: #FFD700;
-    margin-bottom: 0.4em;
-    font-size: 1.2em;
-}
-.service-item p {
-    color: #e0c36b;
-    font-size: 1em;
-}
-.whychoose {
     background: #101820;
-    padding: 3em 1em 2em 1em;
-    text-align: center;
-}
-.whychoose h2 {
-    color: #FFD700;
-    font-size: 2em;
-    margin-bottom: 1em;
-}
-.why-list {
-    list-style: none;
-    padding: 0;
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: left;
-}
-.why-list li {
-    background: #23263a;
     color: #fff;
-    margin-bottom: 1em;
-    padding: 1em 1.5em;
-    border-radius: 10px;
-    border-left: 5px solid #FFD700;
-    font-size: 1.1em;
-    box-shadow: 0 1px 6px #FFD70011;
 }
-.contact {
-    background: #181c2b;
-    padding: 3em 1em 6em 1em;
-    text-align: center;
-}
-.contact h2 {
-    color: #FFD700;
-    font-size: 2em;
-    margin-bottom: 0.7em;
-}
-.contact p, .contact a {
-    color: #e0c36b;
-    font-size: 1.1em;
-    text-decoration: none;
-}
+
 .site-header {
     background: linear-gradient(90deg, #FFD700 0%, #101820 100%);
     padding: 1.5em 0 1em 0;
     text-align: center;
     box-shadow: 0 2px 12px #FFD70022;
+    border-bottom: 1px solid #FFD70044;
 }
 .brand-title {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     font-size: 2.4em;
     color: #101820;
     letter-spacing: 6px;
@@ -181,6 +29,194 @@ footer {
     border: 2px solid #FFD700;
     box-shadow: 0 2px 16px #FFD70033;
 }
+
+nav {
+    margin-bottom: 0;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    gap: 0.5em;
+}
+nav ul li {
+    margin: 0 1.5em;
+}
+nav ul li a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+    padding: 0.4em 1em;
+    border-radius: 6px;
+    display: inline-block;
+}
+nav ul li a:hover, nav ul li a:focus {
+    color: #101820;
+    background: #FFD700;
+    box-shadow: 0 2px 8px #FFD70044;
+    outline: none;
+}
+
+.hero {
+    background: linear-gradient(120deg, #101820 70%, #FFD700 100%), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    padding: 5em 2em 4em 2em;
+    text-align: center;
+    border-bottom: 2px solid #FFD700;
+    position: relative;
+    overflow: hidden;
+}
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(120deg, #101820cc 70%, #FFD70088 100%);
+    z-index: 1;
+}
+.hero h1, .hero p {
+    position: relative;
+    z-index: 2;
+}
+.hero h1 {
+    color: #FFD700;
+    font-size: 2.8em;
+    margin-bottom: 0.3em;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 12px #101820cc;
+}
+.hero p {
+    color: #fff;
+    font-size: 1.3em;
+    margin-bottom: 0;
+    text-shadow: 0 1px 8px #101820cc;
+}
+
+.services {
+    background: #181c2b;
+    padding: 3em 1em 2em 1em;
+    text-align: center;
+    border-bottom: 1px solid #FFD70022;
+}
+.services h2 {
+    color: #FFD700;
+    font-size: 2em;
+    margin-bottom: 1.5em;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+.service-item {
+    background: #23263a;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(16,24,32,0.12);
+    padding: 2em 1.5em;
+    width: 260px;
+    margin-bottom: 1.5em;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #FFD70022;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.service-item:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 32px #FFD70033;
+    border-color: #FFD70088;
+}
+.service-icon {
+    font-size: 2.2em;
+    margin-bottom: 0.5em;
+    display: block;
+}
+.service-item h3 {
+    color: #FFD700;
+    margin-bottom: 0.4em;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+.service-item p {
+    color: #e0c36b;
+    font-size: 1em;
+    margin: 0;
+}
+
+.whychoose {
+    background: #101820;
+    padding: 3em 1em 2em 1em;
+    text-align: center;
+    border-bottom: 1px solid #FFD70022;
+}
+.whychoose h2 {
+    color: #FFD700;
+    font-size: 2em;
+    margin-bottom: 1em;
+    font-weight: 700;
+}
+.why-list {
+    list-style: none;
+    padding: 0;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+.why-list li {
+    background: #23263a;
+    color: #fff;
+    margin-bottom: 1em;
+    padding: 1em 1.5em;
+    border-radius: 12px;
+    border-left: 5px solid #FFD700;
+    font-size: 1.1em;
+    box-shadow: 0 1px 6px #FFD70011;
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+.why-list li:hover {
+    box-shadow: 0 4px 16px #FFD70033;
+    border-color: #FFD700cc;
+}
+
+.contact {
+    background: #181c2b;
+    padding: 3em 1em 6em 1em;
+    text-align: center;
+}
+.contact h2 {
+    color: #FFD700;
+    font-size: 2em;
+    margin-bottom: 0.7em;
+    font-weight: 700;
+}
+.contact p, .contact a {
+    color: #e0c36b;
+    font-size: 1.1em;
+    text-decoration: none;
+    word-break: break-all;
+}
+.contact a:hover, .contact a:focus {
+    color: #FFD700;
+    text-decoration: underline;
+}
+
+footer {
+    background: #1a1a2e;
+    color: #FFD700;
+    text-align: center;
+    padding: 1em 0;
+    letter-spacing: 1px;
+    font-size: 1em;
+    border-top: 1px solid #FFD700;
+    margin-top: 0;
+}
+
 /* Hamburger menu styles */
 .nav-toggle {
     display: none;
@@ -218,6 +254,17 @@ footer {
     top: 9px;
 }
 
+@media (max-width: 1100px) {
+    .services-list {
+        gap: 1em;
+    }
+    .service-item {
+        width: 45vw;
+        min-width: 220px;
+        max-width: 320px;
+    }
+}
+
 @media (max-width: 900px) {
     .nav-toggle {
         display: block;
@@ -250,6 +297,53 @@ footer {
     nav ul li {
         margin: 0.7em 0;
     }
+    .site-header {
+        padding: 1em 0 0.7em 0;
+    }
+    .brand-title {
+        font-size: 1.5em;
+        padding: 0.1em 0.5em;
+        letter-spacing: 3px;
+    }
+    .hero {
+        padding: 2.5em 0.5em 2em 0.5em;
+    }
+    .hero h1 {
+        font-size: 1.5em;
+    }
+    .hero p {
+        font-size: 1em;
+    }
+    .services {
+        padding: 2em 0.5em 1em 0.5em;
+    }
+    .services h2, .whychoose h2, .contact h2 {
+        font-size: 1.3em;
+    }
+    .whychoose {
+        padding: 2em 0.5em 1em 0.5em;
+    }
+    .why-list li {
+        font-size: 1em;
+        padding: 0.7em 1em;
+    }
+    .contact {
+        padding: 2em 0.5em 3em 0.5em;
+    }
+    footer {
+        font-size: 0.9em;
+        padding: 0.7em 0;
+    }
+    .services-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+    .service-item {
+        width: 98vw;
+        min-width: 0;
+        max-width: 99vw;
+    }
 }
 
 @media (max-width: 600px) {
@@ -260,9 +354,33 @@ footer {
     nav {
         top: 3.2em;
     }
+    .brand-title {
+        font-size: 1.1em;
+        padding: 0.1em 0.2em;
+        letter-spacing: 2px;
+    }
+    .service-item {
+        padding: 1em 0.5em;
+        width: 98vw;
+        min-width: 0;
+        max-width: 99vw;
+    }
+    .why-list li {
+        font-size: 0.95em;
+        padding: 0.5em 0.7em;
+    }
+    .hero h1 {
+        font-size: 1.1em;
+    }
+    .hero {
+        padding: 1.5em 0.2em 1em 0.2em;
+    }
+    .services, .whychoose, .contact {
+        padding-left: 0.2em;
+        padding-right: 0.2em;
+    }
 }
 
-/* Ensure nav is always visible on desktop */
 @media (min-width: 901px) {
     .nav-toggle {
         display: none;
