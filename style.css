@@ -181,95 +181,105 @@ footer {
     border: 2px solid #FFD700;
     box-shadow: 0 2px 16px #FFD70033;
 }
+/* Hamburger menu styles */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 2.2em;
+    right: 1.5em;
+    z-index: 200;
+    cursor: pointer;
+}
+.hamburger {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: #FFD700;
+    position: relative;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+.hamburger::before, .hamburger::after {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: #FFD700;
+    position: absolute;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+.hamburger::before {
+    top: -9px;
+}
+.hamburger::after {
+    top: 9px;
+}
+
 @media (max-width: 900px) {
-    .services-list {
-        flex-direction: column;
-        align-items: center;
+    .nav-toggle {
+        display: block;
     }
-    .service-item {
-        width: 90%;
+    nav {
+        display: none;
+        background: #1a1a2e;
+        position: absolute;
+        top: 4.5em;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 4px 16px #10182033;
+        border-bottom: 2px solid #FFD700;
+        z-index: 150;
     }
-    .site-header {
-        padding: 1em 0 0.7em 0;
+    nav.open {
+        display: block;
+        animation: fadeInNav 0.3s;
     }
-    .brand-title {
-        font-size: 1.5em;
-        padding: 0.1em 0.5em;
-        letter-spacing: 3px;
+    @keyframes fadeInNav {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
     }
     nav ul {
         flex-direction: column;
-        gap: 0.5em;
+        align-items: center;
+        gap: 0.7em;
+        padding: 1em 0;
     }
     nav ul li {
-        margin: 0.5em 0;
-    }
-    .hero {
-        padding: 2.5em 0.5em 2em 0.5em;
-    }
-    .hero h1 {
-        font-size: 1.5em;
-    }
-    .hero p {
-        font-size: 1em;
-    }
-    .services {
-        padding: 2em 0.5em 1em 0.5em;
-    }
-    .services h2, .whychoose h2, .contact h2 {
-        font-size: 1.3em;
-    }
-    .whychoose {
-        padding: 2em 0.5em 1em 0.5em;
-    }
-    .why-list li {
-        font-size: 1em;
-        padding: 0.7em 1em;
-    }
-    .contact {
-        padding: 2em 0.5em 3em 0.5em;
-    }
-    footer {
-        font-size: 0.9em;
-        padding: 0.7em 0;
+        margin: 0.7em 0;
     }
 }
 
 @media (max-width: 600px) {
-    .brand-title {
-        font-size: 1.1em;
-        padding: 0.1em 0.2em;
-        letter-spacing: 2px;
+    .nav-toggle {
+        top: 1.3em;
+        right: 0.7em;
     }
-    nav ul {
-        flex-direction: column;
-        gap: 0.3em;
-    }
-    .service-item {
-        padding: 1em 0.5em;
-        width: 98%;
-    }
-    .why-list li {
-        font-size: 0.95em;
-        padding: 0.5em 0.7em;
-    }
-    .hero h1 {
-        font-size: 1.1em;
-    }
-    .hero {
-        padding: 1.5em 0.2em 1em 0.2em;
-    }
-    .services, .whychoose, .contact {
-        padding-left: 0.2em;
-        padding-right: 0.2em;
+    nav {
+        top: 3.2em;
     }
 }
 
-/* Optional: Make nav sticky on mobile for easier access */
-@media (max-width: 900px) {
+/* Ensure nav is always visible on desktop */
+@media (min-width: 901px) {
+    .nav-toggle {
+        display: none;
+    }
     nav {
-        position: sticky;
-        top: 0;
-        z-index: 100;
+        display: block !important;
+        position: static;
+        background: none;
+        box-shadow: none;
+        border-bottom: none;
+    }
+    nav ul {
+        flex-direction: row;
+        gap: 0;
+        padding: 0;
+    }
+    nav ul li {
+        margin: 0 1.5em;
     }
 }

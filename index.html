@@ -10,7 +10,10 @@
     <header class="site-header">
         <h1 class="brand-title">ND CONSTRUCTION</h1>
     </header>
-    <nav>
+    <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav">
+        <span class="hamburger"></span>
+    </button>
+    <nav id="main-nav">
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Services</a></li>
@@ -87,11 +90,21 @@
         </section>
         <section class="contact" id="contact">
             <h2>Contact Us</h2>
-            <p>Ready to start your dream project? <br>Email: <a href="mailto:info@ndconstructions.com">info@ndconstructions.com</a> <br>Phone: <a href="tel:+1234567890">+91 7797725755</a></p>
+            <p>Ready to start your dream project? <br>Email: <a href="mailto:info@ndconstructions.com">info@ndconstructions.com</a> <br>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
         </section>
     </main>
     <footer>
         <p>&copy; 2025 ND Constructions. All rights reserved.</p>
     </footer>
+    <script>
+    // Hamburger menu toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('main-nav');
+    navToggle.addEventListener('click', function() {
+        nav.classList.toggle('open');
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', !expanded);
+    });
+    </script>
 </body>
 </html>
